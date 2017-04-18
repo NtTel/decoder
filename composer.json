@@ -1,5 +1,5 @@
 {
-    "name": "sourcecop/runtime",
+    "name": "sourcecop/scoprun",
     "description": "SourceCop Runtime Decoder Package.",
     "keywords": ["sourcecop", "composer", "package"],
     "license": "DBAD",
@@ -11,14 +11,15 @@
     ],
     "type": "project",
     "require": {
-		"php": ">=5.4"
+		"php": ">=5.4",
+        "sourcecop/scoprun": "dev-master"
     },
 	"require-dev": {
 		"phpunit/phpunit": "5.2.*"
     },
 	"autoload": {
         "psr-4": {
-            "Sourcecop\\Runtime\\": "src/"
+            "sourcecop\\scoprun\\": "src/"
         }
     }
 }
