@@ -1,0 +1,24 @@
+{
+    "name": "Sourcecop/Runtime",
+    "description": "SourceCop Runtime Decoder Package.",
+    "keywords": ["sourcecop", "composer", "package"],
+    "license": "DBAD",
+    "authors": [
+        {
+            "name": "Gary MacDougall",
+            "email": "gary@sourcecop.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+		"php": ">=5.4"
+    },
+	"require-dev": {
+		"phpunit/phpunit": "5.2.*"
+    },
+	"autoload": {
+        "psr-4": {
+            "Sourcecop\\Runtime\\": "src/"
+        }
+    }
+}
