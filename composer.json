@@ -1,5 +1,5 @@
 {
-    "name": "Sourcecop/Runtime",
+    "name": "sourcecop/runtime",
     "description": "SourceCop Runtime Decoder Package.",
     "keywords": ["sourcecop", "composer", "package"],
     "license": "DBAD",
