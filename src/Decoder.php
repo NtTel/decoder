@@ -1,5 +1,5 @@
 <?php
-namespace Sourcecop\Decoder;
+namespace SourceCop\Decoder;
 
 /**
 *  Decoder
@@ -24,6 +24,6 @@ class Decoder {
   * @return string
   */
    public function method1($param1){
-			return "Hello World";
+	return "Hello World";
    }
 }

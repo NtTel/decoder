@@ -1,8 +1,8 @@
 {
     "name": "sourcecop/decoder",
-    "description": "SourceCop Runtime Decoder Package.",
+    "description": "SourceCop Decoder Package.",
     "keywords": ["sourcecop", "composer", "package"],
-    "license": "DBAD",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Gary MacDougall",
@@ -12,7 +12,6 @@
     "type": "project",
     "require": {
 		"php": ">=5.4",
-        "sourcecop/decoder": "dev-master",
         "phpfastcache/phpfastcache": "^5.0"
     },
 	"require-dev": {

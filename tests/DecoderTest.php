@@ -1,11 +1,13 @@
-<?php 
+<?php
+use SourceCop\Decoder\Decoder;
+
 /**
 *  Corresponding Class to test DecoderTest class
 *
 *  For each class in your library, there should be a corresponding Unit-Test for it
 *  Unit-Tests should be as much as possible independent from other test going on.
 *
-*  @author yourname
+*  @author Gary MacDougall
 */
 class DecoderTest extends PHPUnit_Framework_TestCase{
 	
@@ -17,7 +19,7 @@ class DecoderTest extends PHPUnit_Framework_TestCase{
   *
   */
   public function testIsThereAnySyntaxError(){
-	$var = new Sourcecop\Decoder;
+	$var = new Decoder;
 	$this->assertTrue(is_object($var));
 	unset($var);
   }
@@ -30,7 +32,7 @@ class DecoderTest extends PHPUnit_Framework_TestCase{
   *
   */
   public function testMethod1(){
-	$var = new Sourcecop\Decoder;
+	$var = new Decoder;
 	$this->assertTrue($var->method1("hey") == 'Hello World');
 	unset($var);
   }
