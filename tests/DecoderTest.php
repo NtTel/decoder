@@ -1,5 +1,5 @@
 <?php
-use SourceCop\Decoder\Decoder;
+use Sourcecop\Decoder;
 
 /**
 *  Corresponding Class to test DecoderTest class
@@ -33,7 +33,7 @@ class DecoderTest extends PHPUnit_Framework_TestCase{
   */
   public function testMethod1(){
 	$var = new Decoder;
-	$this->assertTrue($var->method1("hey") == 'Hello World');
+	$this->assertTrue($var->get("filename") != '');
 	unset($var);
   }
   
