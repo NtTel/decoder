@@ -20,7 +20,7 @@ class DecoderException extends \Exception { }
 class Decoder {
 
     private $m_publicKey;  // Public key that you used to encode your project.
-    
+    private $m_entityPath; // the path to the entity folder
     /*
      *
      *
@@ -30,14 +30,19 @@ class Decoder {
         // need a public key to operate.
         if ($publicKey != '') {
             // now let's check to see if there's a valid public key
-            $m_publicKey = $publicKey;
+            $this->m_publicKey = $publicKey;
         } else {
-            throw new DecoderException ('Public key is empty.');
+            throw new DecoderException ('Error: Public key is empty.');
         }        
     }
-    public function setEntityPath ($entityPath)
+    public function setEntityPath ($EntityPath)
     {
-        print ($entityPath);
+        if (is_dir($EntityPath))
+        {   
+            $this->m_entityPath = $EntityPath;
+        } else {
+            throw new DecoderException ('Error: SCOPBIN does not exist. You do not have any encoded files.');
+        }
     }
     /*
      *
@@ -45,7 +50,7 @@ class Decoder {
      */
     public function getEncodedEntityByID ($EntityID)
     {
-        print (__DIR__);
+        return file_get_contents($this->m_entityPath . "/" . $EntityID);
     }
 
     /*
@@ -54,6 +59,6 @@ class Decoder {
      */
     public function decodeEntityData ($entityData)
     {
-            
+        return $entityData;
     }
 }
