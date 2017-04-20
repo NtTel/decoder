@@ -18,10 +18,12 @@ class DecoderTest extends PHPUnit_Framework_TestCase{
   * any typo before you even use this library in a real project.
   *
   */
-  public function testIsThereAnySyntaxError(){
-	$var = new Decoder;
-	$this->assertTrue(is_object($var));
-	unset($var);
+  public function testIsThereAnySyntaxError()
+  {
+      $publicKey = "PUBLICKEY";
+      $var = new Decoder($publicKey);
+      $this->assertTrue(is_object($var));
+      unset($var);
   }
   
   /**
@@ -31,10 +33,13 @@ class DecoderTest extends PHPUnit_Framework_TestCase{
   * any typo before you even use this library in a real project.
   *
   */
-  public function testMethod1(){
-	$var = new Decoder;
-	$this->assertTrue($var->get("filename") != '');
-	unset($var);
+  public function testMethod1()
+  {
+      $publicKey = "PUBLICKEY";
+      $var = new Decoder($publicKey);
+      $entityID = "1000";
+      $this->expectOutputString($var->getEncodedEntityByID($entityID));
+      unset($var);
   }
   
 }
