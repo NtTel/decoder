@@ -2,6 +2,15 @@
 namespace Sourcecop;
 
 /**
+*  DecoderException
+*
+*  SourceCop Decoder Exception object.
+*
+*  @author Gary MacDougall
+*/
+class DecoderException extends \Exception { }
+
+/**
 *  Decoder
 *
 *  SourceCop Decoder object.
@@ -23,7 +32,7 @@ class Decoder {
             // now let's check to see if there's a valid public key
             $m_publicKey = $publicKey;
         } else {
-            throw new Exception ('Public key is empty.');
+            throw new DecoderException ('Public key is empty.');
         }        
     }
 
@@ -42,6 +51,6 @@ class Decoder {
      */
     public function decodeEntityData ($entityData)
     {
-
+            
     }
 }
