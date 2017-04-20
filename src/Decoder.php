@@ -35,7 +35,10 @@ class Decoder {
             throw new DecoderException ('Public key is empty.');
         }        
     }
-
+    public function setEntityPath ($entityPath)
+    {
+        print ($entityPath);
+    }
     /*
      *
      *
