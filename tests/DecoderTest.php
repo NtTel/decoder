@@ -1,5 +1,7 @@
 <?php
+
 use Sourcecop\Decoder;
+use Sourcecop\DecoderException;
 
 /**
 *  Corresponding Class to test DecoderTest class
@@ -9,19 +11,20 @@ use Sourcecop\Decoder;
 *
 *  @author Gary MacDougall
 */
-class DecoderTest extends PHPUnit_Framework_TestCase{
+class DecoderTest extends PHPUnit_Framework_TestCase
+{
 	
   /**
   * Just check if the Decoder has no syntax error 
   *
   * This is just a simple check to make sure your library has no syntax error. This helps you troubleshoot
   * any typo before you even use this library in a real project.
-  *
+  *x
   */
   public function testIsThereAnySyntaxError()
   {
-      $publicKey = "PUBLICKEY";
-      $var = new Decoder($publicKey);
+      $publicKey = "1234567890123456ABCDEFGHIJKLMNOP";
+      $var = new Decoder($publicKey, "tests");
       $this->assertTrue(is_object($var));
       unset($var);
   }
@@ -35,11 +38,15 @@ class DecoderTest extends PHPUnit_Framework_TestCase{
   */
   public function testMethod1()
   {
-      $publicKey = "PUBLICKEY";
-      $var = new Decoder($publicKey);
-      $entityID = "1000";
+      $publicKey = "1234567890123456ABCDEFGHIJKLMNOP";
+      $var = new Decoder($publicKey, "tests");
+      $entityID = "1";
       $this->expectOutputString($var->getEncodedEntityByID($entityID));
       unset($var);
   }
   
+  public function testDecodeEntity()
+  {
+
+  }
 }
